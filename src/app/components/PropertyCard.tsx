@@ -42,24 +42,7 @@ export function PropertyCard({
             alt={title}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
           />
-          <div className="absolute top-4 left-4">
-            <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">
-              {type}
-            </span>
-          </div>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              setIsLiked(!isLiked);
-            }}
-            className="absolute top-4 right-4 bg-white/90 dark:bg-gray-800/90 p-2.5 rounded-full hover:scale-110 transition-transform"
-          >
-            <Heart
-              className={`h-5 w-5 ${
-                isLiked ? "fill-red-500 text-red-500" : "text-gray-600 dark:text-gray-300"
-              }`}
-            />
-          </button>
+         
         </div>
 
         <div className="p-6">

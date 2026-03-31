@@ -126,38 +126,7 @@ export function Listings() {
         </div>
       </div>
 
-      {/* Filters */}
-      {/* <div className="bg-background border-b border-border sticky top-20 z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-              <Input
-                type="text"
-                placeholder="Search by location, property type..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 h-12"
-              />
-            </div>
-            
-            <select
-              value={propertyType}
-              onChange={(e) => setPropertyType(e.target.value)}
-              className="h-12 px-4 rounded-lg border border-border bg-background text-foreground"
-            >
-              <option value="all">All Types</option>
-              <option value="sale">For Sale</option>
-              <option value="rent">For Rent</option>
-            </select>
-
-            <Button variant="outline" className="h-12 px-6">
-              <SlidersHorizontal className="h-5 w-5 mr-2" />
-              More Filters
-            </Button>
-          </div>
-        </div>
-      </div> */}
+    
 
       {/* Properties Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -187,19 +156,6 @@ export function Listings() {
           </div>
         </motion.div>
 
-        {/* <div className="mb-6 flex items-center justify-between">
-          <p className="text-muted-foreground">
-            Showing {properties.length} featured properties
-          </p>
-          <select className="px-4 py-2 rounded-lg border border-border bg-background text-foreground">
-            <option>Sort by: Featured</option>
-            <option>Newest First</option>
-            <option>Oldest First</option>
-            <option>Bedrooms: High to Low</option>
-            <option>Square Feet: High to Low</option>
-          </select>
-        </div> */}
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {properties.map((property, index) => (
             <motion.div
@@ -213,18 +169,7 @@ export function Listings() {
           ))}
         </div>
 
-        {/* Pagination */}
-        {/* <div className="mt-12 flex justify-center">
-          <div className="flex gap-2">
-            <Button variant="outline">Previous</Button>
-            <Button className="bg-primary">1</Button>
-            <Button variant="outline">2</Button>
-            <Button variant="outline">3</Button>
-            <Button variant="outline">Next</Button>
-          </div>
-        </div> */}
-
-        {/* Contact CTA */}
+       
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
