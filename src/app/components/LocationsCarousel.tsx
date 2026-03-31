@@ -88,10 +88,11 @@ export function LocationsCarousel() {
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold mb-2">{location.city}</h3>
                 <p className="text-gray-200 opacity-90 text-sm sm:text-base">{location.description}</p>
-                
+                <Link to="/listings" >
                 <button className="mt-3 sm:mt-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm px-4 sm:px-6 py-2 rounded-lg transition-all text-sm sm:text-base opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
                   Explore Properties
                 </button>
+                </Link>
               </div>
             </motion.div>
           </div>
