@@ -86,7 +86,6 @@ export function FeaturedPropertiesCarousel() {
     dots: true,
     infinite: true,
     speed: 800,
-    slidesToShow: { default: 3 , 1024: 2, 768: 1 },
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 6000,
@@ -124,7 +123,7 @@ export function FeaturedPropertiesCarousel() {
     <div className="relative w-full max-w-full overflow-hidden px-4 sm:px-8 md:px-16">
       <Slider {...settings} className="property-slider">
         {properties.map((property) => (
-          <div key={property.id} className="outline-none px-2 py-4">
+          <div key={property.id} className="outline-none px-2 py-4 flex">
             <PropertyCard {...property} />
           </div>
         ))}
