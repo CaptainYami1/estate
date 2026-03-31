@@ -1,15 +1,11 @@
 // import { useState } from "react";
 import { motion } from "motion/react";
 import { PropertyCard } from "../components/PropertyCard";
-import { Search, SlidersHorizontal, Phone, Mail, MapPin } from "lucide-react";
+import {  Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "../components/ui/button";
-// import { Input } from "../components/ui/input";
 import { Link } from "react-router";
 
 export function Listings() {
-  // const [searchQuery, setSearchQuery] = useState("");
-  // const [propertyType, setPropertyType] = useState("all");
-
   const properties = [
     {
       id: 1,

@@ -3,15 +3,13 @@ import { Link, useParams } from "react-router";
 import { motion } from "motion/react";
 import Slick from "react-slick";
 import { 
-  Bed, Bath, Square, MapPin, Car, Calendar, Home, 
+  Bed, Bath, Square, MapPin, Car, Home, 
   Share2, Heart, ChevronLeft, ChevronRight, 
   Phone,
   Mail,
   MessageCircle
 } from "lucide-react";
 import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
-import { Textarea } from "../components/ui/textarea";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 
