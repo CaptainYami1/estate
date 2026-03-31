@@ -1,8 +1,7 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { Bed, Bath, Square, MapPin, Heart } from "lucide-react";
+import { Bed, Bath, Square, MapPin } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { useState } from "react";
 
 interface PropertyCardProps {
   id: number;
@@ -27,7 +26,7 @@ export function PropertyCard({
   sqft,
   type = "For Sale"
 }: PropertyCardProps) {
-  const [isLiked, setIsLiked] = useState(false);
+  
 
   return (
     <motion.div
