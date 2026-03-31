@@ -110,10 +110,10 @@ export function FeaturedPropertiesCarousel() {
   };
 
   return (
-    <div className="px-12 featured-carousel-wrapper">
-      <Slider {...settings} className="bottom-0!">
+    <div className="px-2 sm:px-6 md:px-12">
+      <Slider {...settings}>
         {properties.map((property) => (
-          <div key={property.id} className="px-4 flex ">
+          <div key={property.id} className="px-2 sm:px-3 md:px-4">
             <PropertyCard {...property} />
           </div>
         ))}
