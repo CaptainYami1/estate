@@ -33,7 +33,7 @@ export function LocationsCarousel() {
     // }
   ];
 
-  const settings = {
+   const settings = {
     dots: true,
     infinite: true,
     speed: 1000,
@@ -56,14 +56,16 @@ export function LocationsCarousel() {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           centerMode: false,
+          arrows: false,
         }
       }
     ]
   };
 
   return (
-     <div className="relative px-2 sm:px-4">
+    <div className="relative px-2 sm:px-4">
       <Slider {...settings}>
         {locations.map((location, index) => (
           <div key={index} className="px-2 sm:px-3">

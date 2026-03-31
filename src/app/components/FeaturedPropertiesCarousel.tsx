@@ -1,4 +1,6 @@
 import Slick from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import { PropertyCard } from "./PropertyCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import pent from "../../assets/pent.jpg";
@@ -80,40 +82,49 @@ export function FeaturedPropertiesCarousel() {
     }
   ];
 
-  const settings = {
+ const settings = {
     dots: true,
     infinite: true,
     speed: 800,
-    slidesToShow: 3,
+    slidesToShow: { default: 3 , 1024: 2, 768: 1 },
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 6000,
     pauseOnHover: true,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
+    // Focus: Ensure arrows are handled gracefully on mobile
     responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          arrows: true,
         }
       },
       {
-        breakpoint: 640,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
+          arrows: false, // Arrows often break mobile layouts
+          centerMode: true,
+          centerPadding: "20px", // Shows a peek of the next slide
         }
       }
     ]
   };
 
   return (
-    <div className="px-2 sm:px-6 md:px-12">
-      <Slider {...settings}>
+    <div className="relative w-full max-w-full overflow-hidden px-4 sm:px-8 md:px-16">
+      <Slider {...settings} className="property-slider">
         {properties.map((property) => (
-          <div key={property.id} className="px-2 sm:px-3 md:px-4">
+          <div key={property.id} className="outline-none px-2 py-4">
             <PropertyCard {...property} />
           </div>
         ))}
