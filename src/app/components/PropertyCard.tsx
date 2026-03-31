@@ -24,7 +24,7 @@ export function PropertyCard({
   beds,
   baths,
   sqft,
-  type = "For Sale"
+  // type = "For Sale"
 }: PropertyCardProps) {
   
 
