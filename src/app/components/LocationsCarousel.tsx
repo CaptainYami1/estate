@@ -37,7 +37,6 @@ export function LocationsCarousel() {
     dots: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 6000,
@@ -45,6 +44,12 @@ export function LocationsCarousel() {
     centerMode: true,
     centerPadding: "0",
     responsive: [
+       {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
       {
         breakpoint: 1024,
         settings: {

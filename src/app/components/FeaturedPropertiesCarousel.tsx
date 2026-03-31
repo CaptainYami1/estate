@@ -16,7 +16,7 @@ function PrevArrow({ onClick }: ArrowProps) {
   return (
     <button
       onClick={onClick}
-      className="absolute -left-5 top-1/2 -translate-y-1/2 z-10 bg-primary hover:bg-primary/90 p-3 rounded-full transition-all shadow-lg"
+      className="absolute -left-5 top-1/2 hidden md:block  -translate-y-1/2 z-10 bg-primary hover:bg-primary/90 p-3 rounded-full transition-all shadow-lg"
     >
       <ChevronLeft className="h-5 w-5 text-primary-foreground" />
     </button>
@@ -27,7 +27,7 @@ function NextArrow({ onClick }: ArrowProps) {
   return (
     <button
       onClick={onClick}
-      className="absolute -right-5 top-1/2 -translate-y-1/2 z-10 bg-primary hover:bg-primary/90 p-3 rounded-full transition-all shadow-lg"
+      className="absolute -right-5 top-1/2 hidden md:block -translate-y-1/2 z-10 bg-primary hover:bg-primary/90 p-3 rounded-full transition-all shadow-lg"
     >
       <ChevronRight className="h-5 w-5 text-primary-foreground" />
     </button>
@@ -111,6 +111,8 @@ export function FeaturedPropertiesCarousel() {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          PrevArrow: false, // Show arrows on mobile for better navigation
+          NextArrow: false,
           arrows: false, // Arrows often break mobile layouts
           centerMode: true,
           centerPadding: "20px", // Shows a peek of the next slide
