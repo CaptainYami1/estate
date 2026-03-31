@@ -1,0 +1,38 @@
+/* Slick Carousel Custom Styling */
+
+.slick-dots {
+  bottom: 30px !important;
+}
+
+.featured-carousel-wrapper .slick-dots {
+  bottom: -20px !important;
+}
+.slick-dots li button:before {
+  font-size: 12px !important;
+  color: white !important;
+  opacity: 0.5 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* Property carousel dots */
+.slick-slider:not(.slick-initialized) .slick-dots li button:before {
+  color: var(--primary) !important;
+}
+
+.slick-slider:not(.slick-initialized) .slick-dots li.slick-active button:before {
+  color: var(--primary) !important;
+  opacity: 1 !important;
+}
+
+/* Smooth transitions */
+.slick-slide {
+  transition: all 0.3s ease-in-out;
+}
+
+.slick-slide > div {
+  outline: none;
+}
