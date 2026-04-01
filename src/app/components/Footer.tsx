@@ -171,11 +171,13 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3 text-sm text-muted-foreground">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span>123 Luxury Avenue, Ikeja, Lagos</span>
+                <span>Ijere Wurugudu Village, Mowe, Off Lagos - Ibadan Express Way, Obafemi Owode Local Govt, Ogun State.</span>
               </li>
               <li className="flex items-center space-x-3 text-sm text-muted-foreground">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                <span>+234 801 123 4567</span>
+                <span><a href="tel:+2348037161694" type="tel">
+                  +234 803 716 1694
+                </a></span>
               </li>
               <li className="flex items-center space-x-3 text-sm text-muted-foreground">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />

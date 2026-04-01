@@ -190,10 +190,12 @@ export function Listings() {
                 Contact Us
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="min-w-[200px] bg-white/10 hover:bg-white/20 border-white text-white">
-              <Phone className="h-5 w-5 mr-2" />
-              Call: +1 (555) 123-4567
-            </Button>
+            <a href="tel:+2348037161694" type="tel">
+              <Button size="lg" variant="outline" className="min-w-[200px] bg-white/10 hover:bg-white/20 border-white text-white">
+                <Phone className="h-5 w-5 mr-2" />
+                Call: +234 803 716 1694
+              </Button>
+            </a>
           </div>
         </motion.div>
       </div>

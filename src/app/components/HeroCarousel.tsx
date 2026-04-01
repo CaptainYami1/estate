@@ -1,4 +1,3 @@
-
 import { motion } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -40,20 +39,20 @@ export function HeroCarousel() {
       image: hero1,
       title: "Luxury Modern Estates",
       subtitle: "Discover Your Dream Home",
-      description: "Explore our exclusive collection of premium properties"
+      description: "Explore our exclusive collection of premium properties",
     },
     {
       image: hero2,
       title: "Elegant Penthouses",
       subtitle: "Experience Urban Luxury",
-      description: "Sophisticated living spaces in prime locations"
+      description: "Sophisticated living spaces in prime locations",
     },
     {
       image: hero3,
       title: "Beachfront Paradise",
       subtitle: "Coastal Living Redefined",
-      description: "Wake up to breathtaking ocean views every day"
-    }
+      description: "Wake up to breathtaking ocean views every day",
+    },
   ];
 
   const settings = {
@@ -81,9 +80,9 @@ export function HeroCarousel() {
                 alt={slide.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent" />
             </div>
-            
+
             <div className="relative h-full flex items-center">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <motion.div
@@ -123,14 +122,14 @@ export function HeroCarousel() {
                     className="flex flex-wrap gap-4"
                   >
                     <Link to="/listings">
-                    <button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105">
-                      Explore Properties
-                    </button>
+                      <button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105">
+                        Explore Properties
+                      </button>
                     </Link>
                     <Link to="/contact">
-                    <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105">
-                      Contact Us
-                    </button>
+                      <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105">
+                        Contact Us
+                      </button>
                     </Link>
                   </motion.div>
                 </motion.div>

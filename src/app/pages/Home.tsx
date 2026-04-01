@@ -16,24 +16,27 @@ export function Home() {
   const features = [
     {
       title: "Prime Locations",
-      description: "Access to the most sought-after neighborhoods and exclusive areas.",
-      icon: "🏙️"
+      description:
+        "Access to the most sought-after neighborhoods and exclusive areas.",
+      icon: "🏙️",
     },
     {
       title: "Expert Guidance",
       description: "Professional agents with decades of combined experience.",
-      icon: "🎯"
+      icon: "🎯",
     },
     {
       title: "Virtual Tours",
-      description: "Experience properties from anywhere with immersive 3D tours.",
-      icon: "🎥"
+      description:
+        "Experience properties from anywhere with immersive 3D tours.",
+      icon: "🎥",
     },
     {
       title: "Investment Advice",
-      description: "Strategic insights to maximize your real estate investments.",
-      icon: "📊"
-    }
+      description:
+        "Strategic insights to maximize your real estate investments.",
+      icon: "📊",
+    },
   ];
 
   return (
@@ -79,7 +82,7 @@ export function Home() {
               Discover our handpicked selection of premium properties
             </p>
           </motion.div>
-          
+
           <FeaturedPropertiesCarousel />
         </div>
       </section>
@@ -137,7 +140,7 @@ export function Home() {
               Don't just take our word for it - hear from our satisfied clients
             </p>
           </motion.div>
-          
+
           <TestimonialsCarousel />
         </div>
       </section>
@@ -158,8 +161,10 @@ export function Home() {
               Luxury properties in the world's most prestigious destinations
             </p>
           </motion.div>
-          
-          <LocationsCarousel />
+
+          <div className="relative w-full">
+            <LocationsCarousel />
+          </div>
         </div>
       </section>
 

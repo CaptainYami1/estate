@@ -7,6 +7,8 @@ import pent from "../../assets/pent.jpg";
 import villa1 from "../../assets/villa1.jpg";
 import apart from "../../assets/apart1.jpg";
 import mans from "../../assets/hero-carou1.jpg";
+import { useEffect, useState } from "react";
+import { s } from "motion/react-client";
 
 interface ArrowProps {
   onClick?: () => void;
@@ -82,44 +84,61 @@ export function FeaturedPropertiesCarousel() {
     }
   ];
 
+    const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
+  
+  function getSlidesToShow() {
+  if (typeof window === "undefined") return 3; 
+  const width = window.innerWidth;
+
+  if (width < 640) return 1;   
+  if (width < 1024) return 2;  
+  return 3;                    
+}
+  
+   useEffect(() => {
+     const handleResize = () => setSlidesToShow(getSlidesToShow());
+     window.addEventListener("resize", handleResize);
+     handleResize(); // run on mount
+     return () => window.removeEventListener("resize", handleResize);
+   }, []);
  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 800,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 6000,
-    pauseOnHover: true,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
-    // Focus: Ensure arrows are handled gracefully on mobile
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          arrows: true,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          PrevArrow: false, // Show arrows on mobile for better navigation
-          NextArrow: false,
-          arrows: false, // Arrows often break mobile layouts
-          centerMode: true,
-          centerPadding: "20px", // Shows a peek of the next slide
-        }
-      }
-    ]
-  };
+  dots: true,
+  infinite: true,
+  speed: 800,
+  slidesToShow: slidesToShow,
+  slidesToScroll: 1, 
+  autoplay: true,
+  autoplaySpeed: 6000,
+  pauseOnHover: true,
+  arrows: true,
+  prevArrow: <PrevArrow />,
+  nextArrow: <NextArrow />,
+  // responsive: [
+  //   {
+  //     breakpoint: 1024,
+  //     settings: {
+  //       slidesToShow: 3,
+  //     }
+  //   },
+  //   {
+  //     breakpoint: 768,
+  //     settings: {
+  //       slidesToShow: 2,
+  //       arrows: false,
+  //       centerPadding: "20px",
+  //     }
+  //   },
+  //   {
+  //     breakpoint: 525,
+  //     settings: {
+  //       slidesToShow: 1,
+  //       arrows: false,
+  //       centerMode: true,
+  //       centerPadding: "20px",
+  //     }
+  //   }
+  // ]
+};
 
   return (
     <div className="relative w-full max-w-full overflow-hidden px-4 sm:px-8 md:px-16">

@@ -5,7 +5,7 @@ import { ThemeProvider } from "../components/ThemeProvider";
 
 export function Root() {
   return (
-    <ThemeProvider>
+    <ThemeProvider >
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">

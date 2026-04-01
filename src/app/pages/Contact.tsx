@@ -7,12 +7,12 @@ export function Contact() {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["123 Computer Village Avenue", "Ikeja, LG 10001", "Nigeria"]
+      details: ["Ijere Wurugudu Village, Mowe,", "Off Lagos - Ibadan Express Way,", "Obafemi Owode Local Govt,", "Ogun State, Nigeria"]
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+234 803 123-4567", "+234 815 567-8901", "Mon-Sat: 9AM-6PM"]
+      details: ["+234 803 716 1694", "Mon-Sat: 9AM-6PM"]
     },
     {
       icon: Mail,
@@ -103,7 +103,7 @@ export function Contact() {
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-lg mb-1">Call Us Now</h3>
-                      <p className="text-primary font-medium">+234 803 123-4567</p>
+                      <p className="text-primary font-medium">+234 803 616 1694</p>
                       <p className="text-sm text-muted-foreground">Available Mon-Sat, 9AM-6PM</p>
                     </div>
                     <Send className="h-5 w-5 text-muted-foreground" />
@@ -132,7 +132,7 @@ export function Contact() {
 
                 {/* WhatsApp Contact */}
                 <motion.a
-                  href="https://wa.me/2348155678901?text=Hi,%20I'm%20interested%20in%20your%20luxury%20properties"
+                  href="https://wa.me/2348037161694?text=Hi,%20I'm%20interested%20in%20your%20luxury%20properties"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
@@ -145,7 +145,7 @@ export function Contact() {
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-lg mb-1">WhatsApp</h3>
-                      <p className="text-primary font-medium">+234 815 567-8901</p>
+                      <p className="text-primary font-medium">+234 803 716 1694</p>
                       <p className="text-sm text-muted-foreground">Chat with us instantly</p>
                     </div>
                     <Send className="h-5 w-5 text-muted-foreground" />
@@ -163,8 +163,8 @@ export function Contact() {
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-lg mb-1">Visit Our Office</h3>
-                      <p className="text-muted-foreground">123 Luxury Avenue</p>
-                      <p className="text-muted-foreground">Manhattan, NY 10001</p>
+                      <p className="text-muted-foreground">Ijere Wurugudu Village, Mowe, Off Lagos - Ibadan Express Way, </p>
+                      <p className="text-muted-foreground">Obafemi Owode Local Govt, Ogun State, Nigeria.</p>
                     </div>
                   </div>
                 </motion.div>
@@ -186,12 +186,7 @@ export function Contact() {
                       support@vineyardofnature@gmail.com
                     </a>
                   </p>
-                  <p className="text-muted-foreground">
-                    <span className="font-medium">Alternative Phone:</span>{" "}
-                    <a href="tel:+2348155678901" className="text-primary hover:underline">
-                      +234 815 567-8901
-                    </a>
-                  </p>
+                 
                 </div>
               </div>
             </motion.div>
@@ -206,7 +201,7 @@ export function Contact() {
             >
               <div className="h-96 bg-secondary/20 rounded-xl overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126846.01254231359!2d3.281126809493276!3d6.529528755506534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9228fa2a3999%3A0xd7a8324bddbba1f0!2sIkeja%2C%20Lagos!5e0!3m2!1sen!2sng!4v1774737905211!5m2!1sen!2sng"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d495.08889603664784!2d3.557426560033348!3d6.925088200000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bced5d55e9c73%3A0xe086a4c359f29492!2sOBAFEMI-OWODE%20local%20Government%20Office!5e0!3m2!1sen!2sng!4v1775045471228!5m2!1sen!2sng"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

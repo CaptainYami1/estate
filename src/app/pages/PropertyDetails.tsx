@@ -87,7 +87,7 @@ export function PropertyDetails() {
             <div key={index} className="relative h-[70vh]">
               <ImageWithFallback
                 src={image}
-                alt={`Property view ${index + 1}`}
+                alt={`Property view ₦{index + 1}`}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -100,7 +100,7 @@ export function PropertyDetails() {
             className="bg-white/90 hover:bg-white p-3 rounded-full transition-all shadow-lg"
           >
             <Heart
-              className={`h-6 w-6 ${
+              className={`h-6 w-6 ₦{
                 isLiked ? "fill-red-500 text-red-500" : "text-gray-800"
               }`}
             />
@@ -131,7 +131,7 @@ export function PropertyDetails() {
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-muted-foreground mb-1">Price</p>
-                  <p className="text-4xl font-bold text-primary">$8,500,000</p>
+                  <p className="text-4xl font-bold text-primary">₦8,500,000</p>
                 </div>
               </div>
 
@@ -203,7 +203,7 @@ export function PropertyDetails() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">HOA Fees</p>
-                  <p className="font-semibold">$850/month</p>
+                  <p className="font-semibold">₦850/month</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">Property ID</p>
@@ -230,7 +230,7 @@ export function PropertyDetails() {
               <div className="space-y-3 mb-6">
                 {/* Phone Contact */}
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+2348037161694"
                   className="flex items-center gap-4 p-4 bg-primary/5 hover:bg-primary/10 border border-primary/20 rounded-lg transition-all group"
                 >
                   <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
@@ -238,7 +238,7 @@ export function PropertyDetails() {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-sm">Call Now</p>
-                    <p className="text-primary text-sm">+1 (555) 123-4567</p>
+                    <p className="text-primary text-sm">+234 803 716 1694</p>
                   </div>
                 </a>
 
@@ -258,7 +258,7 @@ export function PropertyDetails() {
 
                 {/* WhatsApp Contact */}
                 <a
-                  href="https://wa.me/15551234567?text=Hi,%20I'm%20interested%20in%20the%20Modern%20Luxury%20Villa%20property"
+                  href="https://wa.me/2348037161694?text=Hi,%20I'm%20interested%20in%20the%20Modern%20Luxury%20Villa%20property"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-primary/5 hover:bg-primary/10 border border-primary/20 rounded-lg transition-all group"

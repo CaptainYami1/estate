@@ -12,6 +12,7 @@ export function Navbar() {
   const { theme, setTheme } = useTheme();
   const location = useLocation();
 
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -27,7 +28,7 @@ export function Navbar() {
     { path: "/contact", label: "Contact" },
   ];
 
-  return (
+ return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -39,13 +40,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-          <img src={logo} alt="Vineyard of Nature Logo" width={160} height={80}/>
-            {/* <div className="bg-primary p-2 rounded-lg group-hover:scale-110 transition-transform">
-              <Building2 className="h-6 w-6 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              VineyardOfNature
-            </span> */}
+           <img src={logo} alt="Vineyard of Nature Logo" width={160} height={80}/>
           </Link>
 
           {/* Desktop Navigation */}
@@ -55,16 +50,22 @@ export function Navbar() {
                 key={link.path}
                 to={link.path}
                 className={`relative px-1 py-2 transition-colors ${
-                  location.pathname === link.path
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
+                  scrolled || location.pathname !== "/"
+                    ? location.pathname === link.path
+                      ? "text-primary "
+                      : "text-foreground hover:text-primary"
+                    : location.pathname === link.path
+                    ? "text-white"
+                    : "text-white/90 hover:text-white"
                 }`}
               >
                 {link.label}
                 {location.pathname === link.path && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                    className={`absolute bottom-0 left-0 right-0 h-0.5 ${
+                      scrolled || location.pathname !== "/" ? "bg-primary" : "bg-white"
+                    }`}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -78,7 +79,7 @@ export function Navbar() {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="rounded-full"
+              className={`rounded-full ${!scrolled ? "text-white hover:bg-white/20" : ""}`}
             >
               {theme === "dark" ? (
                 <Sun className="h-5 w-5" />
@@ -86,11 +87,12 @@ export function Navbar() {
                 <Moon className="h-5 w-5" />
               )}
             </Button>
-            <Link to="/contact">
-              <Button className="bg-primary hover:bg-primary/90">
-                Schedule Viewing
-              </Button>
-            </Link>
+            <Button 
+              asChild 
+              className="bg-primary hover:bg-primary/90"
+            >
+              <Link to="/contact">Contact Us</Link>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,7 +101,7 @@ export function Navbar() {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="rounded-full"
+              className={`rounded-full ${!scrolled ? "text-white hover:bg-white/20" : ""}`}
             >
               {theme === "dark" ? (
                 <Sun className="h-5 w-5" />
@@ -109,7 +111,11 @@ export function Navbar() {
             </Button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:text-primary transition-colors"
+              className={`transition-colors ${
+                scrolled
+                  ? "text-foreground hover:text-primary"
+                  : "text-white hover:text-white/80"
+              }`}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -141,11 +147,9 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Link to="/contact">
-              <Button className="w-full bg-primary hover:bg-primary/90">
-                Schedule Viewing
+              <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                <Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link>
               </Button>
-              </Link>
             </div>
           </motion.div>
         )}
