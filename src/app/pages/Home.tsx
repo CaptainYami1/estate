@@ -4,6 +4,7 @@ import { FeaturedPropertiesCarousel } from "../components/FeaturedPropertiesCaro
 import { TestimonialsCarousel } from "../components/TestimonialsCarousel";
 import { LocationsCarousel } from "../components/LocationsCarousel";
 import { Building2, Users, Award, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Home() {
   const stats = [
@@ -183,12 +184,16 @@ export function Home() {
               Let our expert team guide you to the perfect property
             </p>
             <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/listings">
               <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all hover:scale-105">
                 Browse Listings
               </button>
+              </Link>
+              <Link to="/contact">
               <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/30 transition-all hover:scale-105">
                 Schedule Consultation
               </button>
+              </Link>
             </div>
           </motion.div>
         </div>
