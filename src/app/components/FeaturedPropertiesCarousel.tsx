@@ -8,7 +8,6 @@ import villa1 from "../../assets/villa1.jpg";
 import apart from "../../assets/apart1.jpg";
 import mans from "../../assets/hero-carou1.jpg";
 import { useEffect, useState } from "react";
-import { s } from "motion/react-client";
 
 interface ArrowProps {
   onClick?: () => void;
