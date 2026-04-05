@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
-import { Menu, X, Moon, Sun, } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "./ui/button";
-import logo from "../../assets/vineR-logo.png"
+import logo from "../../assets/vineR-logo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,6 @@ export function Navbar() {
   const { theme, setTheme } = useTheme();
   const location = useLocation();
 
-  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -28,19 +27,21 @@ export function Navbar() {
     { path: "/contact", label: "Contact" },
   ];
 
- return (
+  return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        scrolled
+          ? "bg-background/95 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-           <img src={logo} alt="Vineyard of Nature Logo" width={80} />
+            <img src={logo} alt="Vineyard of Nature Logo" width={80} />
           </Link>
 
           {/* Desktop Navigation */}
@@ -55,8 +56,8 @@ export function Navbar() {
                       ? "text-primary "
                       : "text-foreground hover:text-primary"
                     : location.pathname === link.path
-                    ? "text-white"
-                    : "text-white/90 hover:text-white"
+                      ? "text-white"
+                      : "text-white/90 hover:text-white"
                 }`}
               >
                 {link.label}
@@ -64,7 +65,9 @@ export function Navbar() {
                   <motion.div
                     layoutId="navbar-indicator"
                     className={`absolute bottom-0 left-0 right-0 h-0.5 ${
-                      scrolled || location.pathname !== "/" ? "bg-primary" : "bg-white "
+                      scrolled || location.pathname !== "/"
+                        ? "bg-primary"
+                        : "bg-white "
                     }`}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
@@ -87,10 +90,7 @@ export function Navbar() {
                 <Moon className="h-5 w-5 text-black" />
               )}
             </Button>
-            <Button 
-              asChild 
-              className="bg-primary hover:bg-primary/90"
-            >
+            <Button asChild className="bg-primary hover:bg-primary/90">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -106,18 +106,26 @@ export function Navbar() {
               {theme === "dark" ? (
                 <Sun className="h-5 w-5" />
               ) : (
-                <Moon className="h-5 w-5" />
+                <Moon className="h-5 w-5 text-black" />
               )}
             </Button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`transition-colors ${
-                scrolled
-                  ? "text-foreground hover:text-primary"
-                  : "text-white hover:text-white/80"
+                theme === "dark"
+                  ? scrolled
+                    ? "text-foreground hover:text-primary"
+                    : "text-white hover:text-white/80"
+                  : scrolled
+                    ? "text-foreground hover:text-primary"
+                    : "text-black hover:text-black/80"
               }`}
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -148,7 +156,9 @@ export function Navbar() {
                 </Link>
               ))}
               <Button asChild className="w-full bg-primary hover:bg-primary/90">
-                <Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link>
+                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                  Contact Us
+                </Link>
               </Button>
             </div>
           </motion.div>
