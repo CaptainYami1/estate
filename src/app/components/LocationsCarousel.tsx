@@ -8,28 +8,22 @@ const Slider = (Slick as any).default || Slick;
 export function LocationsCarousel() {
   const locations = [
     {
-      city: "New York",
-      properties: "350+ Properties",
+      city: "Lagos",
+      properties: "35+ Properties",
       image: "https://images.unsplash.com/photo-1699363059417-aeda250390eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb3dudG93biUyMGNpdHklMjBza3lsaW5lfGVufDF8fHx8MTc3NDcxOTgzMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      description: "Premium Manhattan penthouses and luxury apartments"
+      description: "Premium beach houses and luxury apartments"
     },
     {
-      city: "Los Angeles",
-      properties: "280+ Properties",
+      city: "Ogun",
+      properties: "80+ Properties",
       image: "https://images.unsplash.com/photo-1759256243437-9c8f7238c42b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBtYW5zaW9uJTIwZXh0ZXJpb3J8ZW58MXx8fHwxNzc0NzE4NzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      description: "Beverly Hills estates and Hollywood Hills mansions"
+      description: "Vineyard of nature estates houses and landed properties"
     },
     {
-      city: "Miami",
-      properties: "190+ Properties",
+      city: "Ibadan",
+      properties: "19+ Properties",
       image: "https://images.unsplash.com/photo-1764660732489-6d6e5d0673e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWFjaGZyb250JTIwdmlsbGElMjBzdW5zZXR8ZW58MXx8fHwxNzc0NzE5ODI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      description: "Beachfront villas and oceanview condos"
-    },
-    {
-      city: "Dubai",
-      properties: "220+ Properties",
-      image: "https://images.unsplash.com/photo-1634412114581-6376e49ef8e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBnbGFzcyUyMGJ1aWxkaW5nfGVufDF8fHx8MTc3NDYxNjQyMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      description: "Ultra-luxury skyscraper residences"
+      description: "Landed properties with nice cozy environments"
     }
   ];
 

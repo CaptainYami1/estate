@@ -1,30 +1,33 @@
 import Slick from "react-slick";
 import { Star } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import img1 from "../../assets/face-50yearold-african-woman.jpg";
+import img2 from "../../assets/Ni0xLmpwZw.jpg";
+import img3 from "../../assets/aiman.jpg"
 
 const Slider = (Slick as any).default || Slick;
 export function TestimonialsCarousel() {
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Dr Sarah Johnson",
       role: "Property Investor",
-      image: "https://images.unsplash.com/photo-1762341120638-b5b9358ef571?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHdvbWFuJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3NDY4NTA2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: img1,
       rating: 5,
       testimonial: "VineyardOfNature helped me find the perfect investment property. Their team was professional, knowledgeable, and made the entire process seamless. Highly recommended!"
     },
     {
-      name: "Michael Chen",
+      name: "Michael Uche",
       role: "First-time Homebuyer",
-      image: "https://images.unsplash.com/photo-1737574821698-862e77f044c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzc21hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc3NDY3OTg2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      rating: 5,
+      image: img2,
+      rating: 4,
       testimonial: "As a first-time buyer, I was nervous about the process. The VineyardOfNature team guided me every step of the way and found me a home that exceeded my expectations."
     },
     {
-      name: "Emily Rodriguez",
-      role: "Luxury Home Seller",
-      image: "https://images.unsplash.com/photo-1763478958776-ebd04b6459ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjByZWFsdG9yJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzc0NzE5ODMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      name: "Azeez Ogunkoya",
+      role: "Luxury Home buyer",
+      image: img3,
       rating: 5,
-      testimonial: "Selling my luxury home was made incredibly easy with VineyardOfNature. They marketed my property beautifully and found the perfect buyer within weeks."
+      testimonial: "Buying my home was made incredibly easy with VineyardOfNature. They marketed my property beautifully and within weeks after bayment, all necessary documents were handed to me without stress."
     }
   ];
 

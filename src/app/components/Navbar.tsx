@@ -4,7 +4,7 @@ import { Menu, X, Moon, Sun, } from "lucide-react";
 import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "./ui/button";
-import logo from "../../assets/vine-logo.png"
+import logo from "../../assets/vineR-logo.png"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +40,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-           <img src={logo} alt="Vineyard of Nature Logo" width={160} height={80}/>
+           <img src={logo} alt="Vineyard of Nature Logo" width={80} />
           </Link>
 
           {/* Desktop Navigation */}
@@ -64,7 +64,7 @@ export function Navbar() {
                   <motion.div
                     layoutId="navbar-indicator"
                     className={`absolute bottom-0 left-0 right-0 h-0.5 ${
-                      scrolled || location.pathname !== "/" ? "bg-primary" : "bg-white"
+                      scrolled || location.pathname !== "/" ? "bg-primary" : "bg-white "
                     }`}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
@@ -84,7 +84,7 @@ export function Navbar() {
               {theme === "dark" ? (
                 <Sun className="h-5 w-5" />
               ) : (
-                <Moon className="h-5 w-5" />
+                <Moon className="h-5 w-5 text-black" />
               )}
             </Button>
             <Button 

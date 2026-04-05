@@ -1,18 +1,26 @@
 // import { useState } from "react";
 import { motion } from "motion/react";
 import { PropertyCard } from "../components/PropertyCard";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Link } from "react-router";
+import prop1 from "../../assets/Duplex-in-Nigeria.jpg";
+import prop2 from "../../assets/villa1.jpg";
+import prop3 from "../../assets/Diamond Estate , Magodo, _2.jpg.webp";
+import prop4 from "../../assets/house2.jpg";
+import prop5 from "../../assets/house3.jpeg";
+import prop6 from "../../assets/house4.webp";
+import prop7 from "../../assets/house5.jpg";
+import prop8 from "../../assets/bungalow-nigeria.jpg";
+import prop9 from "../../assets/Real-Estate.jpg";
 
 export function Listings() {
   const properties = [
     {
       id: 1,
-      image:
-        "https://images.unsplash.com/photo-1759256243437-9c8f7238c42b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBtYW5zaW9uJTIwZXh0ZXJpb3J8ZW58MXx8fHwxNzc0NzE4NzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Modern Luxury Villa",
-      location: "Beverly Hills, CA",
+      image: prop1,
+      title: "Villa in Ogun",
+      location: "Mowe, OG",
       price: "₦8,500,000",
       beds: 6,
       baths: 7,
@@ -21,11 +29,10 @@ export function Listings() {
     },
     {
       id: 2,
-      image:
-        "https://images.unsplash.com/photo-1762732793012-8bdab3af00b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwcGVudGhvdXNlJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzc0NzE5ODI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Downtown Penthouse",
-      location: "Manhattan, NY",
-      price: "₦12,000,000",
+      image: prop2,
+      title: "Modern Luxury Villa",
+      location: "Lekki Phase 1, LG",
+      price: "₦70,000,000",
       beds: 4,
       baths: 5,
       sqft: 5200,
@@ -33,10 +40,9 @@ export function Listings() {
     },
     {
       id: 3,
-      image:
-        "https://images.unsplash.com/photo-1764660732489-6d6e5d0673e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWFjaGZyb250JTIwdmlsbGElMjBzdW5zZXR8ZW58MXx8fHwxNzc0NzE5ODI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Beachfront Villa",
-      location: "Malibu, CA",
+      image: prop3,
+      title: "Landed property in Owode",
+      location: "Owode, OG",
       price: "₦15,750,000",
       beds: 5,
       baths: 6,
@@ -45,10 +51,9 @@ export function Listings() {
     },
     {
       id: 4,
-      image:
-        "https://images.unsplash.com/photo-1663756915301-2ba688e078cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcGFydG1lbnQlMjBsaXZpbmclMjByb29tfGVufDF8fHx8MTc3NDYyNTE5OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Contemporary Loft",
-      location: "SoHo, NY",
+      image: prop4,
+      title: "Red-Brick Mansion",
+      location: "Oluyole, IB",
       price: "₦3,200,000",
       beds: 3,
       baths: 3,
@@ -57,10 +62,9 @@ export function Listings() {
     },
     {
       id: 5,
-      image:
-        "https://images.unsplash.com/photo-1658280911730-467b4764c09c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBraXRjaGVuJTIwbWFyYmxlfGVufDF8fHx8MTc3NDcxNTQ3OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Designer Townhouse",
-      location: "Chelsea, London",
+      image: prop5,
+      title: "Luxury Mansion in Banana Island",
+      location: "Banana Island, LG",
       price: "₦6,800,000",
       beds: 4,
       baths: 4,
@@ -69,10 +73,9 @@ export function Listings() {
     },
     {
       id: 6,
-      image:
-        "https://images.unsplash.com/photo-1702411200201-3061d0eea802?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBiZWRyb29tJTIwc3VpdGV8ZW58MXx8fHwxNzc0Njc5NjQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Luxury Apartment",
-      location: "Miami Beach, FL",
+      image: prop6,
+      title: "Under-Construction Building",
+      location: "Ibafon, OG",
       price: "₦4,500,000",
       beds: 3,
       baths: 4,
@@ -81,10 +84,9 @@ export function Listings() {
     },
     {
       id: 7,
-      image:
-        "https://images.unsplash.com/photo-1661333587575-25c87c14f398?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzd2ltbWluZyUyMHBvb2wlMjBsdXh1cnl8ZW58MXx8fHwxNzc0NjA4ODkyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Resort-Style Estate",
-      location: "Paradise Valley, AZ",
+      image: prop7,
+      title: "Under-Construction Building",
+      location: "Ogijo, OG",
       price: "₦9,200,000",
       beds: 7,
       baths: 8,
@@ -93,10 +95,9 @@ export function Listings() {
     },
     {
       id: 8,
-      image:
-        "https://images.unsplash.com/photo-1634412114581-6376e49ef8e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBnbGFzcyUyMGJ1aWxkaW5nfGVufDF8fHx8MTc3NDYxNjQyMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Glass Skyscraper Residence",
-      location: "Downtown Dubai",
+      image: prop8,
+      title: "Contemporary Loft Apartment",
+      location: "Garki, Abuja",
       price: "₦11,500,000",
       beds: 5,
       baths: 6,
@@ -105,10 +106,9 @@ export function Listings() {
     },
     {
       id: 9,
-      image:
-        "https://images.unsplash.com/photo-1699363059417-aeda250390eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb3dudG93biUyMGNpdHklMjBza3lsaW5lfGVufDF8fHx8MTc3NDcxOTgzMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "City View Penthouse",
-      location: "Chicago, IL",
+      image: prop9,
+      title: "Housing Estate in Ogun",
+      location: "Owode, OG",
       price: "₦7,300,000",
       beds: 4,
       baths: 5,
@@ -157,12 +157,12 @@ export function Listings() {
                 personalized property recommendations tailored to your needs.
               </p>
             </div>
-            <Link to="/contact">
+            <a href="tel:+2348037161694" type="tel">
               <Button className="bg-primary hover:bg-primary/90 whitespace-nowrap">
                 <Phone className="h-4 w-4 mr-2" />
                 Contact Agent
               </Button>
-            </Link>
+            </a>
           </div>
         </motion.div>
 
@@ -177,6 +177,12 @@ export function Listings() {
               <PropertyCard {...property} />
             </motion.div>
           ))}
+
+          <a href="https://wa.me/2348037161694?text=Hi,%20I'm%20interested%20in%20your%20luxury%20properties">
+            <button className="flex items-center gap-2 w-fit bg-primary text-primary-foreground px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-colors mt-4">
+              <MessageCircle /> Send a message
+            </button>
+          </a>
         </div>
 
         <motion.div

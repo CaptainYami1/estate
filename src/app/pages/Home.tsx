@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 
 export function Home() {
   const stats = [
-    { icon: Building2, value: "1,200+", label: "Properties Sold" },
-    { icon: Users, value: "850+", label: "Happy Clients" },
-    { icon: Award, value: "25+", label: "Awards Won" },
-    { icon: TrendingUp, value: "$2.5B+", label: "Property Value" },
+    { icon: Building2, value: "120+", label: "Properties Sold" },
+    { icon: Users, value: "85+", label: "Happy Clients" },
+    { icon: Award, value: "10+", label: "Awards Won" },
+    { icon: TrendingUp, value: "₦3.5B+", label: "Property Value" },
   ];
 
   const features = [

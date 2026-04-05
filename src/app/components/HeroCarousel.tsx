@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import Slick from "react-slick";
-import hero1 from "../../assets/hero-carou1.jpg";
+import hero1 from "../../assets/Vine-gate.jpeg";
 import hero2 from "../../assets/heroCarou2.jpg";
 import hero3 from "../../assets/heroCarou3.jpg";
 import { Link } from "react-router-dom";
@@ -41,18 +41,18 @@ export function HeroCarousel() {
       subtitle: "Discover Your Dream Home",
       description: "Explore our exclusive collection of premium properties",
     },
-    {
-      image: hero2,
-      title: "Elegant Penthouses",
-      subtitle: "Experience Urban Luxury",
-      description: "Sophisticated living spaces in prime locations",
-    },
-    {
-      image: hero3,
-      title: "Beachfront Paradise",
-      subtitle: "Coastal Living Redefined",
-      description: "Wake up to breathtaking ocean views every day",
-    },
+    // {
+    //   image: hero2,
+    //   title: "Elegant Penthouses",
+    //   subtitle: "Experience Urban Luxury",
+    //   description: "Sophisticated living spaces in prime locations",
+    // },
+    // {
+    //   image: hero3,
+    //   title: "Beachfront Paradise",
+    //   subtitle: "Coastal Living Redefined",
+    //   description: "Wake up to breathtaking ocean views every day",
+    // },
   ];
 
   const settings = {
@@ -80,7 +80,8 @@ export function HeroCarousel() {
                 alt={slide.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent" />
+              {/* <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent " /> */}
+              <div className="absolute inset-0 bg-black/50 " />
             </div>
 
             <div className="relative h-full flex items-center">

@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { Mail, Phone, MapPin } from "lucide-react";
 
-import logo from "../../assets/vine-logo.png"
+import logo from "../../assets/vineR-logo.png"
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,7 +13,7 @@ export function Footer() {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img src={logo} alt="Vineyard of Nature Logo" width={160} height={80}/>
+              <img src={logo} alt="Vineyard of Nature Logo" width={80}/>
               {/* <div className="bg-primary p-2 rounded-lg">
                 <Building2 className="h-6 w-6 text-primary-foreground" />
               </div>
@@ -27,7 +27,7 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <svg
@@ -47,7 +47,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <svg
@@ -90,7 +90,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+               href="https://wa.me/2348037161694?text=Hi,%20I'm%20interested%20in%20your%20luxury%20properties"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <svg

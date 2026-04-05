@@ -2,51 +2,64 @@ import { motion } from "motion/react";
 import Slick from "react-slick";
 import { Award, Target, Eye, Users } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import dire1 from "../../assets/IMG-20260403-WA0002.jpg";
+import dire2 from "../../assets/IMG-20260403-WA0003.jpg";
+import dire4 from "../../assets/IMG-20260403-WA0008.jpg";
+import dire3 from "../../assets/IMG-20260403-WA0009.jpg";
+import fallback from "../../assets/fallback-about.jpg";
 
 const Slider = (Slick as any).default || Slick;
 export function About() {
+  const currentYear = new Date().getFullYear();
+  const compAge = currentYear - 2015;
   const team = [
     {
-      name: "Sarah Johnson",
-      role: "CEO & Founder",
-      image: "https://images.unsplash.com/photo-1762341120638-b5b9358ef571?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHdvbWFuJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3NDY4NTA2MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      bio: "15+ years of experience in luxury real estate"
+      name: "Francis Omoregbe A. Ehikhaese",
+      role: "CEO & Managing Director",
+      image: dire1,
     },
     {
-      name: "Michael Chen",
-      role: "Director of Sales",
-      image: "https://images.unsplash.com/photo-1737574821698-862e77f044c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzc21hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc3NDY3OTg2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      bio: "Specialist in high-value property transactions"
+      name: "Kehinde A. O. Isijola",
+      role: "Director",
+      image: dire2,
     },
     {
-      name: "Emily Rodriguez",
-      role: "Senior Agent",
-      image: "https://images.unsplash.com/photo-1763478958776-ebd04b6459ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjByZWFsdG9yJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzc0NzE5ODMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      bio: "Expert in coastal and waterfront properties"
-    }
+      name: "Godsent Osagie Ehikhaese",
+      role: "Director",
+      image: dire3,
+    },
+    {
+      name: "Joy Ehikhaese",
+      role: "Director",
+      image: dire4,
+    },
   ];
 
   const values = [
     {
       icon: Target,
       title: "Our Mission",
-      description: "To provide exceptional real estate services that exceed client expectations and create lasting relationships built on trust and integrity."
+      description:
+        "With the full complement of industrytried and tested professionals in ouremploy, and at our disposal,every business transactionwith us is treated with quality skill, speed and cost advantage to all parties involved, in order to deliver reasonable and affordable housing.",
     },
     {
       icon: Eye,
       title: "Our Vision",
-      description: "To be the most trusted and innovative luxury real estate firm, setting new standards in the industry through excellence and dedication."
+      description:
+        "To be the global reference point, and the first port of call to anyone in need  of housing property acquisition that is handled with core ethical values and professionalism.",
     },
     {
       icon: Award,
-      title: "Our Values",
-      description: "Integrity, excellence, innovation, and client satisfaction are at the core of everything we do. We're committed to delivering results."
+      title: "Our Core Values",
+      description:
+        "Capacity,Commitment, Assurance, Professionalism, Accountability, Cost effectiveness, Integrity, Transparency, Industry, Excellence, and Service Delivery.",
     },
     {
       icon: Users,
       title: "Our Team",
-      description: "A diverse group of experienced professionals passionate about helping clients find their perfect property and investment opportunities."
-    }
+      description:
+        "A diverse group of experienced professionals passionate about helping clients find their perfect property and investment opportunities.",
+    },
   ];
 
   const settings = {
@@ -63,15 +76,15 @@ export function About() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-        }
+        },
       },
       {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
-        }
-      }
-    ]
+        },
+      },
+    ],
   };
 
   return (
@@ -79,12 +92,12 @@ export function About() {
       {/* Hero Section */}
       <div className="relative h-[60vh] overflow-hidden">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1634412114581-6376e49ef8e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBnbGFzcyUyMGJ1aWxkaW5nfGVufDF8fHx8MTc3NDYxNjQyMXww&ixlib=rb-4.1.0&q=80&w=1080"
+          src={fallback}
           alt="About us"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
-        
+
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -97,8 +110,9 @@ export function About() {
                 About VineyardOfNature
               </h1>
               <p className="text-xl text-gray-200 leading-relaxed">
-                Elevating the standard of luxury real estate for over 25 years. 
-                We're more than just agents – we're your partners in finding the perfect property.
+                Elevating the standard of luxury real estate for over {compAge} years.
+                We're more than just agents – we're your partners in finding the
+                perfect property.
               </p>
             </motion.div>
           </div>
@@ -115,20 +129,31 @@ export function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl font-bold mb-6">Our Story</h2>
+              <h2 className="text-4xl font-bold mb-6">Our Profile</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Founded in 1999, VineyardOfNature began with a simple vision: to transform the 
-                luxury real estate experience. What started as a boutique agency has grown 
-                into one of the most respected names in premium properties.
+                Vineyard Of Nature Estate Limited was incorporated as a private
+                limited liability company on the 24th day of September, 2015 to
+                carry on the business of estate development, sales of developed
+                properties, as well as undeveloped landed properties in Nigeria
+                and elsewhere outside the country.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Over the years, we've facilitated over $2.5 billion in property transactions, 
-                helped more than 850 families find their dream homes, and established ourselves 
-                as industry leaders in luxury real estate.
+                As part of the company's corporate objectives, it is engaged in
+                making available layout and survey plans of land purchased
+                through and from the company. Vineyard Of Nature Estate Limited
+                was also incorporated to engage in the marketing of developed
+                properties, undeveloped landed properties and estate developed
+                in any part of the country and beyond, and all other business
+                activities which facilitate the effective and efficient
+                performance of its core activity of estate development, sales
+                and marketing of developed and undeveloped lands.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Our success is built on unwavering commitment to our clients, deep market 
-                knowledge, and a passion for excellence that drives everything we do.
+                With the above core mandate, the directors of Vineyard Of Nature
+                Estate Limited have crafted a vision that would further guide
+                the company's pursuit of its business relationship with its
+                various stakeholders - buyers, sellers, property transaction
+                brokers, e.t.c, and the government regulatory institutions.
               </p>
             </motion.div>
 
@@ -194,13 +219,15 @@ export function About() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold mb-4">Meet Our Team</h2>
+            <h2 className="text-4xl font-bold mb-4">
+              Meet Our Team And Board of Directors
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Experienced professionals dedicated to your success
             </p>
           </motion.div>
 
-          <div className="px-12">
+          <div className="px-8">
             <Slider {...settings}>
               {team.map((member, index) => (
                 <div key={index} className="px-4">
@@ -220,9 +247,13 @@ export function About() {
                       />
                     </div>
                     <div className="p-6 text-center">
-                      <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+                      <h3 className="text-xl font-semibold mb-2">
+                        {member.name}
+                      </h3>
                       <p className="text-primary mb-3">{member.role}</p>
-                      <p className="text-sm text-muted-foreground">{member.bio}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {member.bio}
+                      </p>
                     </div>
                   </motion.div>
                 </div>
