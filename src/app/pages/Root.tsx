@@ -2,7 +2,7 @@ import { Outlet } from "react-router";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { ThemeProvider } from "../components/ThemeProvider";
-import { ScrollToTop } from "../components/ui/scrolltotop";
+import { ScrollToTop } from "../components/ui/ScrollToTop";
 
 export function Root() {
   return (

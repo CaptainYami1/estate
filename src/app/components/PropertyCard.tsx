@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+
 import { motion } from "motion/react";
 import { Bed, Bath, Square, MapPin } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -16,7 +16,7 @@ interface PropertyCardProps {
 }
 
 export function PropertyCard({
-  id,
+  
   image,
   title,
   location,

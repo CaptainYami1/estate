@@ -251,9 +251,9 @@ export function About() {
                         {member.name}
                       </h3>
                       <p className="text-primary mb-3">{member.role}</p>
-                      <p className="text-sm text-muted-foreground">
+                      {/* <p className="text-sm text-muted-foreground">
                         {member.bio}
-                      </p>
+                      </p> */}
                     </div>
                   </motion.div>
                 </div>
