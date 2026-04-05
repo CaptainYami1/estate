@@ -3,8 +3,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import Slick from "react-slick";
 import hero1 from "../../assets/Vine-gate.jpeg";
-import hero2 from "../../assets/heroCarou2.jpg";
-import hero3 from "../../assets/heroCarou3.jpg";
 import { Link } from "react-router-dom";
 
 interface ArrowProps {
