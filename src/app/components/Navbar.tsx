@@ -122,9 +122,13 @@ export function Navbar() {
               }`}
             >
               {isOpen ? (
-                <X className="h-6 w-6" />
+                <X
+                  className={`h-6 w-6 ${theme === "dark" ? "" : "text-black"}`}
+                />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu
+                  className={`h-6 w-6 ${theme === "dark" ? "" : "text-black"}`}
+                />
               )}
             </button>
           </div>
