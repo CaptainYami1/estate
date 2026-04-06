@@ -7,6 +7,7 @@ import dire2 from "../../assets/IMG-20260403-WA0003.jpg";
 import dire4 from "../../assets/IMG-20260403-WA0008.jpg";
 import dire3 from "../../assets/IMG-20260403-WA0009.jpg";
 import fallback from "../../assets/fallback-about.jpg";
+import { useEffect, useState } from "react";
 
 const Slider = (Slick as any).default || Slick;
 export function About() {
@@ -62,11 +63,29 @@ export function About() {
     },
   ];
 
+  
+  const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
+
+  function getSlidesToShow() {
+    if (typeof window === "undefined") return 3;
+    const width = window.innerWidth;
+
+    if (width < 640) return 1;
+    if (width < 1024) return 2;
+    return 3;
+  }
+
+  useEffect(() => {
+    const handleResize = () => setSlidesToShow(getSlidesToShow());
+    window.addEventListener("resize", handleResize);
+    handleResize(); // run on mount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const settings = {
     dots: true,
     infinite: true,
     speed: 800,
-    slidesToShow: 3,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
